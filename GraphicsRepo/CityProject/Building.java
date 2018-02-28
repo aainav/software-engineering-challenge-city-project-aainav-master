@@ -26,12 +26,13 @@ public class Building
         value_y = y;
         color = shade;
         height = h;
+        width = w;
     }
     
     public void draw(Graphics page)
     {
         page.setColor(color);
-        page.drawRect(value_x, value_y, height, width);
-        page.fillRect(value_x, value_y, height, width);
+        page.drawRect(value_x, value_y, width, height);
+        page.fillRect(value_x, value_y, width, height);
     }
 }

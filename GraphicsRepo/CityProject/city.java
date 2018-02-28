@@ -14,7 +14,13 @@ public class city extends Applet
     // instance variables - replace the example below with your own
     private final int APPLET_WIDTH = 2000;
     private final int APPLET_HEIGHT = 1000;
-    
+    private Building building1, building2, building3;
+    public void init()
+    {
+        building1 = new Building(200, 200, Color.black, 150, 500);
+        building2 = new Building(400,400, Color.black, 100, 600);
+        building3 = new Building(600, 100,Color.black, 100, 500);
+    }
     /**
      * Paint method for applet.
      * 
@@ -25,8 +31,10 @@ public class city extends Applet
         // simple text displayed on applet
         setBackground(new Color(31,190,214));
         setSize(APPLET_WIDTH, APPLET_HEIGHT);
-        Building building1 = new Building(200, 200, Color.black, 150, 500);
-        building1.draw
+        building1.draw(page);
+        building2.draw(page);
+        building3.draw(page);
+        //building4.draw(page);
         /*
         page.setColor(Color.black);
         page.drawRect(200,200,150,500);
