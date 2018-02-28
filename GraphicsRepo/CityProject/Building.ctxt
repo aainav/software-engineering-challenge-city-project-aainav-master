@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=x\ y\ shade\ h\ w
+comment0.target=Building(int,\ int,\ java.awt.Color,\ int,\ int)
+comment0.text=\r\n\ Default\ constructor\ for\ objects\ of\ class\ Building\r\n
+comment1.params=page
+comment1.target=void\ draw(java.awt.Graphics)
+numComments=2
