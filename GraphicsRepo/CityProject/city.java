@@ -53,9 +53,9 @@ public class city extends Applet
         page.fillRect(800,600,300,200);
         */
         //page.setColor(Color.black);
-        page.drawRect(0,500, APPLET_WIDTH, 200);
+        page.drawRect(0,600, APPLET_WIDTH, 200);
         page.setColor(new Color(49, 121, 46));
-        page.fillRect(0,500,APPLET_WIDTH, 200);
+        page.fillRect(0,600,APPLET_WIDTH, 200);
         
     }
 }
