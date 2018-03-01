@@ -1,4 +1,4 @@
 #BlueJ class context
-comment0.params=mat
-comment0.target=Windows(int[][])
+comment0.params=x\ y
+comment0.target=Windows(int,\ int)
 numComments=1

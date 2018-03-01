@@ -10,7 +10,7 @@ public class Windows
 {
     private int[][] positions;
     private int height;
-    public Windows(int [][]mat)
+    public Windows(int x, int y)
     {
     }
 }
