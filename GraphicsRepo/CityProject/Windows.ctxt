@@ -1,4 +1,13 @@
 #BlueJ class context
-comment0.params=x\ y
-comment0.target=Windows(int,\ int)
-numComments=1
+comment0.params=array1\ array2
+comment0.target=Windows(int[],\ int[])
+comment1.params=page
+comment1.target=void\ draw(java.awt.Graphics)
+comment1.text=\n\ \ \ \ public\ void\ array()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ for\ (int\ c\ \=\ 0;\ c\ <\ positions[0].length\ -\ 1;\ c++)\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ for\ (int\ r\ \=\ 0;\ r\ <\ positions.length\ -\ 1;\ r++)\n\ \ \ \ \ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
+comment2.params=x
+comment2.target=void\ setX(int)
+comment3.params=y
+comment3.target=void\ setY(int)
+comment4.params=
+comment4.target=void\ test1()
+numComments=5

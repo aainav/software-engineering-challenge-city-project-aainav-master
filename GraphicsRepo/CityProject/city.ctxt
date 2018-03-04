@@ -3,5 +3,5 @@ comment0.params=
 comment0.target=void\ init()
 comment1.params=page
 comment1.target=void\ paint(java.awt.Graphics)
-comment1.text=\r\n\ Paint\ method\ for\ applet.\r\n\ \r\n\ @param\ \ g\ \ \ the\ Graphics\ object\ for\ this\ applet\r\n
+comment1.text=\n\ Paint\ method\ for\ applet.\n\ \n\ @param\ \ g\ \ \ the\ Graphics\ object\ for\ this\ applet\n
 numComments=2
