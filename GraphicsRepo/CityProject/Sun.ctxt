@@ -1,11 +1,13 @@
 #BlueJ class context
 comment0.params=pos1\ pos2\ w\ h
 comment0.target=Sun(int,\ int,\ int,\ int)
-comment0.text=\n\ Constructor\ -\ makes\ the\ coordinate\ for\ the\ sun\n\ @param\ -\ the\ x-coor,\ y-coor,\ width,\ and\ height\ of\ the\ sun\n
+comment0.text=\r\n\ Constructor\ -\ makes\ the\ coordinate\ for\ the\ sun\r\n\ @param\ -\ the\ x-coor,\ y-coor,\ width,\ and\ height\ of\ the\ sun\r\n
 comment1.params=page
 comment1.target=void\ draw(java.awt.Graphics)
-comment1.text=\n\ draws\ the\ sun\ on\ the\ page\n\ @param\ -\ the\ page\ the\ sun\ is\ drawn\ on\n
+comment1.text=\r\n\ draws\ the\ sun\ on\ the\ page\r\n\ @param\ -\ the\ page\ the\ sun\ is\ drawn\ on\r\n
 comment2.params=new_x
 comment2.target=void\ setPos(int)
-comment2.text=\n\ sets\ the\ new\ x-coor\n\ @param\ -\ the\ new\ x-coor\n\ \n
-numComments=3
+comment2.text=\r\n\ sets\ the\ new\ x-coor\r\n\ @param\ -\ the\ new\ x-coor\r\n\ \r\n
+comment3.params=
+comment3.target=void\ run()
+numComments=4

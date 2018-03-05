@@ -11,7 +11,7 @@ import javax.imageio.*;
  * Aaina Vannan
  * 3.1.7
  */
-public class city extends Applet
+public class city extends Applet implements Runnable
 {
     // instance variables - replace the example below with your own
     private final int APPLET_WIDTH = 2000;
@@ -23,6 +23,9 @@ public class city extends Applet
     private int x; //snows x-coordinate
     private int y; //snows y-coordinate
     Random generator = new Random();
+    private Graphics bufferGraphics;
+    public Image image;
+    
     
     /**
      * Constructor ~ makes 4 buildings, a sun, a background, and an applet with a certain size
@@ -43,9 +46,18 @@ public class city extends Applet
         t3.start();
         Thread t4 = new Thread(building4);
         t4.start();
+        Thread t5 = new Thread(sun);
+        t5.start();
         
+        Thread thread = new Thread(this);
+        thread.start();
+        
+        image = createImage(APPLET_WIDTH, APPLET_HEIGHT);
+        bufferGraphics = image.getGraphics();
         setBackground(new Color(25,132,213)); 
         setSize(APPLET_WIDTH, APPLET_HEIGHT);
+        
+        
     }
     /**
      * Paint method for applet.
@@ -54,43 +66,72 @@ public class city extends Applet
      */
     public void paint(Graphics page)
     {
+        bufferGraphics.setColor(new Color(25,132,213));
+        bufferGraphics.fillRect(0,0,APPLET_WIDTH, 600);
         //draws 4 buildings
         
-        building1.draw(page);
-        building2.draw(page);
-        building3.draw(page);
-        building4.draw(page);
+        building1.draw(bufferGraphics);
+        building2.draw(bufferGraphics);
+        building3.draw(bufferGraphics);
+        building4.draw(bufferGraphics);
         
         //draws the grass
-        page.drawRect(0,600, APPLET_WIDTH, 200);
-        page.setColor(new Color(49, 121, 46));
-        page.fillRect(0,600,APPLET_WIDTH, 200);
-        
+        bufferGraphics.drawRect(0,600, APPLET_WIDTH, 200);
+        bufferGraphics.setColor(new Color(49, 121, 46));
+        bufferGraphics.fillRect(0,600,APPLET_WIDTH, 200);
+        /*
+        for (int i = 0; i < 100; i++) //runs a loop to make a bunch of snow flakes
+            {
+                x = generator.nextInt(10) * 200; //x-coor of snow
+                y = generator.nextInt(1000) - 400; //y-coor of snow
+                
+                //drawing the snowflakes
+                bufferGraphics.setColor(Color.white);
+                bufferGraphics.drawOval(x, y, 3, 3);
+                bufferGraphics.fillOval(x, y, 3, 3);
+            }
+        */
         //SUN STUFF
-        sun.setPos(num); //this changes the position of the sun's x-coor 
-        sun.draw(page); //draws the sun
-        num -= 20; //changes x-coor so it can move
-        //doesn't need to be in a while loop because repaint calls everything again
         
-        if (num< -80) //when sun is off of screen, draw moon
+        sun.draw(bufferGraphics); //draws the sun
+        
+        
+        /*if (num< -80) //when sun is off of screen, draw moon
         {
-            page.setColor(Color.white);
-            page.drawOval(0,25,80,80);
-            page.fillOval(0,25,80,80);
+            bufferGraphics.setColor(Color.white);
+            bufferGraphics.drawOval(0,25,80,80);
+            bufferGraphics.fillOval(0,25,80,80);
             setBackground(new Color(23,56,81)); //changes the background to a darker color
+            /*
             for (int i = 0; i < 100; i++) //runs a loop to make a bunch of snow flakes
             {
                 x = generator.nextInt(10) * 200; //x-coor of snow
                 y = generator.nextInt(1000) - 400; //y-coor of snow
                 
                 //drawing the snowflakes
-                page.setColor(Color.white);
-                page.drawOval(x, y, 3, 3);
-                page.fillOval(x, y, 3, 3);
-            }
-        }
+                bufferGraphics.setColor(Color.white);
+                bufferGraphics.drawOval(x, y, 3, 3);
+                bufferGraphics.fillOval(x, y, 3, 3);
+            }*/
         
-        repaint(); //runs everything through the paint again
+        
+        page.drawImage(image,0,0,this);
+    }
+    
+    public void update(Graphics page)
+    {
+        paint(page);
+    }
+    
+    public void run()
+    {
+        while (true)
+        {
+            try {
+                Thread.sleep(17);
+            } catch (Exception e) {}
+            repaint();//runs everything through the paint again
+        }
     }
 }
 

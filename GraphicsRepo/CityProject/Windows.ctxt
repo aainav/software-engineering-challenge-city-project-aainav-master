@@ -1,14 +1,14 @@
 #BlueJ class context
 comment0.params=array1\ array2
 comment0.target=Windows(int[],\ int[])
-comment0.text=\n\ Constructor\ -\ makes\ the\ 2\ arrays\ for\ each\ building's\ windows\n\ @param\ the\ x-coordinates\ of\ the\ building's\ windows\ and\ the\ y-coordinates\n
+comment0.text=\r\n\ Constructor\ -\ makes\ the\ 2\ arrays\ for\ each\ building's\ windows\r\n\ @param\ the\ x-coordinates\ of\ the\ building's\ windows\ and\ the\ y-coordinates\r\n
 comment1.params=page
 comment1.target=void\ draw(java.awt.Graphics)
-comment1.text=\n\ draws\ the\ windows\ on\ the\ page\n\ @param\ -\ the\ page\ it\ has\ to\ draw\ the\ windows\ on\n
+comment1.text=\r\n\ draws\ the\ windows\ on\ the\ page\r\n\ @param\ -\ the\ page\ it\ has\ to\ draw\ the\ windows\ on\r\n
 comment2.params=x
 comment2.target=void\ setX(int)
-comment2.text=\n\ changes\ the\ x-coordinate\ of\ window\n\ @param\ -\ the\ new\ x-coordinate\n
+comment2.text=\r\n\ changes\ the\ x-coordinate\ of\ window\r\n\ @param\ -\ the\ new\ x-coordinate\r\n
 comment3.params=y
 comment3.target=void\ setY(int)
-comment3.text=\n\ changes\ the\ y-coordinate\ of\ window\n\ @param\ -\ the\ new\ y-coordinate\n
+comment3.text=\r\n\ changes\ the\ y-coordinate\ of\ window\r\n\ @param\ -\ the\ new\ y-coordinate\r\n
 numComments=4

@@ -1,10 +1,12 @@
 #BlueJ class context
-comment0.target=city
-comment0.text=\n\ Class\ city\ -\ makes\ 4\ buildings\ that\ have\ flashing\ windows\ and\ at\ NIGHT,\ SNOW\ FALLS\n\ \n\ Aaina\ Vannan\n\ 3.1.7\n
-comment1.params=
-comment1.target=void\ init()
-comment1.text=\n\ Constructor\ ~\ makes\ 4\ buildings,\ a\ sun,\ a\ background,\ and\ an\ applet\ with\ a\ certain\ size\n
+comment0.params=
+comment0.target=void\ init()
+comment0.text=\r\n\ Constructor\ ~\ makes\ 4\ buildings,\ a\ sun,\ a\ background,\ and\ an\ applet\ with\ a\ certain\ size\r\n
+comment1.params=page
+comment1.target=void\ paint(java.awt.Graphics)
+comment1.text=\r\n\ Paint\ method\ for\ applet.\r\n\ \r\n\ @param\ \ g\ \ \ the\ Graphics\ object\ for\ this\ applet\r\n
 comment2.params=page
-comment2.target=void\ paint(java.awt.Graphics)
-comment2.text=\n\ Paint\ method\ for\ applet.\n\ \n\ @param\ \ g\ \ \ the\ Graphics\ object\ for\ this\ applet\n
-numComments=3
+comment2.target=void\ update(java.awt.Graphics)
+comment3.params=
+comment3.target=void\ run()
+numComments=4

@@ -10,7 +10,7 @@ import javax.imageio.*;
  * Aaina Vanna
  * @version (a version number or a date)
  */
-public class Sun
+public class Sun implements Runnable
 {
     private int x; 
     private int y;
@@ -20,6 +20,7 @@ public class Sun
     private int storage; //is for when you need to restart everything
     private int old_x; //is for getting old x coordinate
     
+    Random generator = new Random();
     /**
      * Constructor - makes the coordinate for the sun
      * @param - the x-coor, y-coor, width, and height of the sun
@@ -40,9 +41,29 @@ public class Sun
      */
     public void draw(Graphics page)
     {
-        page.setColor(Color.yellow);
-        page.drawOval(x, y, width, height);
-        page.fillOval(x, y, width, height);
+        if (x <= -80)
+        {
+            page.setColor(Color.white);
+            page.drawOval(0,25,80,80);
+            page.fillOval(0,25,80,80);
+            /*
+            for (int i = 0; i < 100; i++) //runs a loop to make a bunch of snow flakes
+            {
+                x = generator.nextInt(10) * 200; //x-coor of snow
+                y = generator.nextInt(1000) - 400; //y-coor of snow
+                
+                //drawing the snowflakes
+                page.setColor(Color.white);
+                page.drawOval(x, y, 3, 3);
+                page.fillOval(x, y, 3, 3);
+            }*/
+        }
+        else
+        {
+            page.setColor(Color.yellow);
+            page.drawOval(x, y, width, height);
+            page.fillOval(x, y, width, height);
+        }
         
     }
    
@@ -54,5 +75,16 @@ public class Sun
     public void setPos(int new_x)
     {
         x = new_x;
+    }
+    
+      public void run()
+    {
+        while (true)
+        {
+            try {
+                Thread.sleep(17);
+            } catch (Exception e) {}
+            x -= 1;
+        }
     }
 }
