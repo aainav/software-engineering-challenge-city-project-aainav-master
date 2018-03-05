@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.params=x\ y\ shade\ w\ h
 comment0.target=Building(int,\ int,\ java.awt.Color,\ int,\ int)
-comment0.text=\n\ Default\ constructor\ for\ objects\ of\ class\ Building\n
-comment1.params=
-comment1.target=void\ test()
-comment2.params=page
-comment2.target=void\ draw(java.awt.Graphics)
-comment3.params=
-comment3.target=void\ run()
-numComments=4
+comment0.text=\n\ Default\ constructor\ for\ objects\ of\ class\ Building\n\ @param\ -\ the\ x\ coordinate\ of\ building,\ y\ coordinate\ of\ building,\ color\ of\ building,\ width\n\ of\ building,\ height\ of\ building\n
+comment1.params=page
+comment1.target=void\ draw(java.awt.Graphics)
+comment1.text=\n\ draws\ the\ windows\n\ @param\ -\ the\ graphic\ page\ it\ draws\ in\ \n
+comment2.params=
+comment2.target=void\ run()
+comment2.text=\n\ catches\ exceptions?\n
+numComments=3
