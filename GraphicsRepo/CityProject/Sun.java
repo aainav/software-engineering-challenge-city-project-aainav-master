@@ -41,7 +41,7 @@ public class Sun implements Runnable
      */
     public void draw(Graphics page)
     {
-        if (x <= -80)
+       if (x <= -80)
         {
             page.setColor(Color.white);
             page.drawOval(0,25,80,80);
@@ -77,6 +77,9 @@ public class Sun implements Runnable
         x = new_x;
     }
     
+    /**
+     * catches exceptions, handles threads, and moves the sun
+     */
       public void run()
     {
         while (true)
@@ -86,5 +89,14 @@ public class Sun implements Runnable
             } catch (Exception e) {}
             x -= 1;
         }
+    }
+    
+    /**
+     * returns x
+     * @return x
+     */
+    public int getX()
+    {
+        return x;
     }
 }

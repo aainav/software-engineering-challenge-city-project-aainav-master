@@ -52,8 +52,9 @@ public class city extends Applet implements Runnable
         Thread thread = new Thread(this);
         thread.start();
         
-        image = createImage(APPLET_WIDTH, APPLET_HEIGHT);
+        image = createImage(APPLET_WIDTH, APPLET_HEIGHT); //all for bufferGraphics
         bufferGraphics = image.getGraphics();
+        
         setBackground(new Color(25,132,213)); 
         setSize(APPLET_WIDTH, APPLET_HEIGHT);
         
@@ -66,7 +67,7 @@ public class city extends Applet implements Runnable
      */
     public void paint(Graphics page)
     {
-        bufferGraphics.setColor(new Color(25,132,213));
+        bufferGraphics.setColor(new Color(25,132,213)); //bufferGraphics
         bufferGraphics.fillRect(0,0,APPLET_WIDTH, 600);
         //draws 4 buildings
         
@@ -79,30 +80,15 @@ public class city extends Applet implements Runnable
         bufferGraphics.drawRect(0,600, APPLET_WIDTH, 200);
         bufferGraphics.setColor(new Color(49, 121, 46));
         bufferGraphics.fillRect(0,600,APPLET_WIDTH, 200);
-        /*
-        for (int i = 0; i < 100; i++) //runs a loop to make a bunch of snow flakes
-            {
-                x = generator.nextInt(10) * 200; //x-coor of snow
-                y = generator.nextInt(1000) - 400; //y-coor of snow
-                
-                //drawing the snowflakes
-                bufferGraphics.setColor(Color.white);
-                bufferGraphics.drawOval(x, y, 3, 3);
-                bufferGraphics.fillOval(x, y, 3, 3);
-            }
-        */
+        
         //SUN STUFF
         
         sun.draw(bufferGraphics); //draws the sun
-        
-        
-        /*if (num< -80) //when sun is off of screen, draw moon
+        if(sun.getX() <= -80)
         {
-            bufferGraphics.setColor(Color.white);
-            bufferGraphics.drawOval(0,25,80,80);
-            bufferGraphics.fillOval(0,25,80,80);
-            setBackground(new Color(23,56,81)); //changes the background to a darker color
-            /*
+            //bufferGraphics.setColor(new Color(250,250,250));
+            //bufferGraphics.drawRect(0,,APPLET_WIDTH, APPLET_HEIGHT);
+            //bufferGraphics.fillRect(0,0,APPLET_WIDTH, APPLET_HEIGHT);
             for (int i = 0; i < 100; i++) //runs a loop to make a bunch of snow flakes
             {
                 x = generator.nextInt(10) * 200; //x-coor of snow
@@ -112,17 +98,26 @@ public class city extends Applet implements Runnable
                 bufferGraphics.setColor(Color.white);
                 bufferGraphics.drawOval(x, y, 3, 3);
                 bufferGraphics.fillOval(x, y, 3, 3);
-            }*/
+                
+                //bufferGraphics.drawRect(0,500, APPLET_WIDTH, 10);
+                //bufferGraphics.fillRect(0,500, APPLET_WIDTH, 10);
+            }
+        }
         
-        
-        page.drawImage(image,0,0,this);
+        page.drawImage(image,0,0,this); //bufferGraphics give image with buffers
     }
     
+    /**
+     * this is a bufferGraphic method
+     */
     public void update(Graphics page)
     {
         paint(page);
     }
     
+    /**
+     * catches exceptions and handles threads
+     */
     public void run()
     {
         while (true)
