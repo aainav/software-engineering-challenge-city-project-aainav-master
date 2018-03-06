@@ -25,7 +25,7 @@ public class city extends Applet implements Runnable
     Random generator = new Random();
     private Graphics bufferGraphics;
     public Image image;
-    
+    private int snow_h; //amount of snow being changed ~ height
     
     /**
      * Constructor ~ makes 4 buildings, a sun, a background, and an applet with a certain size
@@ -84,11 +84,13 @@ public class city extends Applet implements Runnable
         //SUN STUFF
         
         sun.draw(bufferGraphics); //draws the sun
+        snow_h = 0;
         if(sun.getX() <= -80)
         {
             //bufferGraphics.setColor(new Color(250,250,250));
             //bufferGraphics.drawRect(0,,APPLET_WIDTH, APPLET_HEIGHT);
             //bufferGraphics.fillRect(0,0,APPLET_WIDTH, APPLET_HEIGHT);
+            snow_h += 1;
             for (int i = 0; i < 100; i++) //runs a loop to make a bunch of snow flakes
             {
                 x = generator.nextInt(10) * 200; //x-coor of snow
@@ -99,8 +101,9 @@ public class city extends Applet implements Runnable
                 bufferGraphics.drawOval(x, y, 3, 3);
                 bufferGraphics.fillOval(x, y, 3, 3);
                 
-                //bufferGraphics.drawRect(0,500, APPLET_WIDTH, 10);
-                //bufferGraphics.fillRect(0,500, APPLET_WIDTH, 10);
+
+                bufferGraphics.drawRect(0,600, APPLET_WIDTH, snow_h );
+                bufferGraphics.fillRect(0,600, APPLET_WIDTH, snow_h);
             }
         }
         
