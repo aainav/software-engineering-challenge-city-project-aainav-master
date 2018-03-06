@@ -91,9 +91,9 @@ public class city extends Applet implements Runnable
             //bufferGraphics.drawRect(0,,APPLET_WIDTH, APPLET_HEIGHT);
             //bufferGraphics.fillRect(0,0,APPLET_WIDTH, APPLET_HEIGHT);
             snow_h += 1;
-            for (int i = 0; i < 100; i++) //runs a loop to make a bunch of snow flakes
+            for (int i = 0; i < 50; i++) //runs a loop to make a bunch of snow flakes
             {
-                x = generator.nextInt(10) * 200; //x-coor of snow
+                x = generator.nextInt(2000); //x-coor of snow
                 y = generator.nextInt(1000) - 400; //y-coor of snow
                 
                 //drawing the snowflakes
